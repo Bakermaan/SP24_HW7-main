@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>_frm_StateCalculator</class>
+ <widget class="QWidget" name="_frm_StateCalculator">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>528</width>
+    <height>516</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Thermodynamic State Calculator</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QGroupBox" name="_grp_Units">
+     <property name="title">
+      <string>System of Units</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QRadioButton" name="_rdo_SI">
+        <property name="text">
+         <string>SI</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="_rdo_English">
+        <property name="text">
+         <string>English</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="_grp_SpecifiedProperties">
+     <property name="title">
+      <string>Specified Properties</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="2" column="0">
+       <widget class="QLineEdit" name="_le_Property1">
+        <property name="text">
+         <string>1.0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="3">
+       <widget class="QLineEdit" name="_le_Property2">
+        <property name="text">
+         <string>100.0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLabel" name="_lbl_Property1_Units">
+        <property name="text">
+         <string>Bar</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0" colspan="2">
+       <widget class="QComboBox" name="_cmb_Property1">
+        <item>
+         <property name="text">
+          <string>Pressure (p)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Temperature (T)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Quality (x)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Specific Internal Energy (u)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Specific Enthalpy (h)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Specific Volume (v)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Specific Entropy (s)</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="2" column="4">
+       <widget class="QLabel" name="_lbl_Property2_Units">
+        <property name="text">
+         <string>C</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="_lbl_Property1">
+        <property name="text">
+         <string>Property 1</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3">
+       <widget class="QLabel" name="_lbl_Property2">
+        <property name="text">
+         <string>Property 2</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0" colspan="5">
+       <widget class="QLabel" name="_lbl_Warning">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3" colspan="2">
+       <widget class="QComboBox" name="_cmb_Property2">
+        <property name="currentIndex">
+         <number>1</number>
+        </property>
+        <item>
+         <property name="text">
+          <string>Pressure (p)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Temperature (T)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Quality (x)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Specific Internal Energy (u)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Specific Enthalpy (h)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Specific Volume (v)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Specific Entropy (s)</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="4" column="0" colspan="5">
+       <widget class="QPushButton" name="_pb_Calculate">
+        <property name="text">
+         <string>Calculate</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="2">
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="_grp_StateProperties">
+     <property name="title">
+      <string>State Properties</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QLabel" name="_lbl_State">
+        <property name="text">
+         <string>State:  saturated</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="_lbl_StateProperties">
+        <property name="text">
+         <string>Pressure = 1000 kPa
+Temperature = 100 C
+X = 1.0</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="_lbl_SatLiqProps">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="_lbl_SatVapProps">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
