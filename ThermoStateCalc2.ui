@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1074</width>
+    <height>911</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QGroupBox" name="_grp_Units">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>20</y>
+     <width>540</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>506</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="title">
+    <string>System of Units</string>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <widget class="QRadioButton" name="_rdo_SI">
+      <property name="text">
+       <string>SI</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QRadioButton" name="_rdo_English">
+      <property name="text">
+       <string>English</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QGroupBox" name="_grp_StateProperties">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>80</y>
+     <width>1051</width>
+     <height>411</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>State Properties</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="title">
+       <string>State 1</string>
+      </property>
+      <widget class="QLabel" name="_lbl_Property1">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>59</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Property 1</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="_cmb_Property1_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>40</y>
+         <width>181</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="currentText">
+        <string>Pressure (p)</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Pressure (p)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Temperature (T)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Quality (x)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Specific Internal Energy (u)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Specific Enthalpy (h)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Specific Volume (v)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Specific Entropy (s)</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLineEdit" name="_le_Property1">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>70</y>
+         <width>181</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>1.0</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="_lbl_Property1_Units">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>70</y>
+         <width>31</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Bar</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="_lbl_Property2">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>20</y>
+         <width>71</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Property 2</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="_cmb_Property2">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>40</y>
+         <width>239</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="currentIndex">
+        <number>1</number>
+       </property>
+       <item>
+        <property name="text">
+         <string>Pressure (p)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Temperature (T)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Quality (x)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Specific Internal Energy (u)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Specific Enthalpy (h)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Specific Volume (v)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Specific Entropy (s)</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLineEdit" name="_le_Property2">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>70</y>
+         <width>239</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>100.0</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="_lbl_Property2_Units">
+       <property name="geometry">
+        <rect>
+         <x>480</x>
+         <y>70</y>
+         <width>31</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>C</string>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="title">
+       <string>State 2</string>
+      </property>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>101</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Property 1</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_2">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>20</y>
+         <width>71</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Property 2</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="_cmb_Property1_3">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>50</y>
+         <width>181</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="currentText">
+        <string>Pressure (p)</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Pressure (p)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Temperature (T)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Quality (x)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Specific Internal Energy (u)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Specific Enthalpy (h)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Specific Volume (v)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Specific Entropy (s)</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QComboBox" name="_cmb_Property2_3">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>50</y>
+         <width>211</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="currentIndex">
+        <number>1</number>
+       </property>
+       <item>
+        <property name="text">
+         <string>Pressure (p)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Temperature (T)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Quality (x)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Specific Internal Energy (u)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Specific Enthalpy (h)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Specific Volume (v)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Specific Entropy (s)</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLineEdit" name="_le_Property1_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>80</y>
+         <width>181</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>1.0</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="_lbl_Property1_Units_2">
+       <property name="geometry">
+        <rect>
+         <x>200</x>
+         <y>80</y>
+         <width>31</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Bar</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="_le_Property2_2">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>80</y>
+         <width>211</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>100.0</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="_lbl_Property2_Units_2">
+       <property name="geometry">
+        <rect>
+         <x>470</x>
+         <y>80</y>
+         <width>31</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>C</string>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="_pb_Calculate">
+      <property name="text">
+       <string>Calculate</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QGroupBox" name="_grp_StateProperties_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>500</y>
+     <width>1041</width>
+     <height>391</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Specified Properties</string>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="title">
+       <string>State 2 Properties</string>
+      </property>
+      <widget class="QLabel" name="_lbl_StateProperties_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>40</y>
+         <width>482</width>
+         <height>121</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Pressure = 1000 kPa
+Temperature = 100 C [TSat=99.606(C)] 
+ internal Energy = 2506.171 (W/kg) 
+ Enthalpy= 2675.767 (W/kg) 
+ Entropy = 7.361 (W/kg*C) 
+ Specfic Volume = 1.696 (m^3/kg) 
+ Quality =1.0</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="_lbl_State_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>482</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Region:  saturated</string>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_4">
+      <property name="title">
+       <string>State 1 Properties</string>
+      </property>
+      <widget class="QLabel" name="_lbl_State">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>482</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Region:  saturated</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="_lbl_StateProperties">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>40</y>
+         <width>482</width>
+         <height>111</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Pressure = 1000 kPa
+Temperature = 100 C [TSat=99.606(C)] 
+ internal Energy = 2506.171 (W/kg) 
+ Enthalpy= 2675.767 (W/kg) 
+ Entropy = 7.361 (W/kg*C) 
+ Specfic Volume = 1.696 (m^3/kg) 
+ Quality =1.0</string>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_5">
+      <property name="title">
+       <string>State Changes</string>
+      </property>
+      <widget class="QLabel" name="_lbl_State_3">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>482</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Region:  saturated to saturated</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="_lbl_StateProperties_3">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>40</y>
+         <width>482</width>
+         <height>131</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Pressure diffrence = 0 
+Temperature diffrence = 0 C 
+ temp sat diffrence = 0 
+ internal diff Energy = 0 (W/kg) 
+ Enthalpy= 2675.767 (W/kg) 
+ Entropy diffrence = 0 (W/kg*C) 
+ Specfic Volume diffrence = 0 (m^3/kg) 
+ Quality diffrence = 1.0</string>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
