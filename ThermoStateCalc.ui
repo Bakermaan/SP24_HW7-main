@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>693</width>
+    <width>1074</width>
     <height>911</height>
    </rect>
   </property>
@@ -440,14 +440,53 @@
     <rect>
      <x>10</x>
      <y>500</y>
-     <width>1061</width>
-     <height>411</height>
+     <width>1041</width>
+     <height>391</height>
     </rect>
    </property>
    <property name="title">
     <string>Specified Properties</string>
    </property>
-   <layout class="QVBoxLayout" name="verticalLayout_3">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="title">
+       <string>State 2 Properties</string>
+      </property>
+      <widget class="QLabel" name="_lbl_StateProperties_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>40</y>
+         <width>482</width>
+         <height>121</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Pressure = 1000 kPa
+Temperature = 100 C [TSat=99.606(C)]
+ internal Energy = 2506.171 (W/kg)
+ Enthalpy= 2675.767 (W/kg)
+ Entropy = 7.361 (W/kg*C)
+ Specfic Volume = 1.696 (m^3/kg)
+ Quality =1.0</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="_lbl_State_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>482</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Region:  saturated</string>
+       </property>
+      </widget>
+     </widget>
+    </item>
     <item>
      <widget class="QGroupBox" name="groupBox_4">
       <property name="title">
@@ -472,48 +511,17 @@
          <x>10</x>
          <y>40</y>
          <width>482</width>
-         <height>48</height>
+         <height>111</height>
         </rect>
        </property>
        <property name="text">
         <string>Pressure = 1000 kPa
-Temperature = 100 C
-X = 1.0</string>
-       </property>
-      </widget>
-     </widget>
-    </item>
-    <item>
-     <widget class="QGroupBox" name="groupBox_3">
-      <property name="title">
-       <string>State 2 Properties</string>
-      </property>
-      <widget class="QLabel" name="_lbl_StateProperties_2">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>40</y>
-         <width>482</width>
-         <height>48</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Pressure = 1000 kPa
-Temperature = 100 C
-X = 1.0</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="_lbl_State_2">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>20</y>
-         <width>482</width>
-         <height>16</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Region:  saturated</string>
+Temperature = 100 C [TSat=99.606(C)]
+ internal Energy = 2506.171 (W/kg)
+ Enthalpy= 2675.767 (W/kg)
+ Entropy = 7.361 (W/kg*C)
+ Specfic Volume = 1.696 (m^3/kg)
+ Quality =1.0</string>
        </property>
       </widget>
      </widget>
@@ -533,7 +541,7 @@ X = 1.0</string>
         </rect>
        </property>
        <property name="text">
-        <string>Region:  saturated</string>
+        <string>Region:  saturated to saturated</string>
        </property>
       </widget>
       <widget class="QLabel" name="_lbl_StateProperties_3">
@@ -542,13 +550,18 @@ X = 1.0</string>
          <x>10</x>
          <y>40</y>
          <width>482</width>
-         <height>48</height>
+         <height>131</height>
         </rect>
        </property>
        <property name="text">
-        <string>Pressure = 1000 kPa
-Temperature = 100 C
-X = 1.0</string>
+        <string>Pressure diffrence = 0
+Temperature diffrence = 0 C
+ temp sat diffrence = 0
+ internal diff Energy = 0 (W/kg)
+ Enthalpy= 2675.767 (W/kg)
+ Entropy diffrence = 0 (W/kg*C)
+ Specfic Volume diffrence = 0 (m^3/kg)
+ Quality diffrence = 1.0</string>
        </property>
       </widget>
      </widget>
