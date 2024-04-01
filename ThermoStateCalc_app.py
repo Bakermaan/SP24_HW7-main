@@ -223,6 +223,35 @@ class main_window(QWidget,Ui__frm_StateCalculator):
         stProps += "\nQuality = {:0.3f}".format(self.x)
         self.stProps=stProps
 
+    def calculatePropertiesForState(self, stateProperties):
+        """
+        Calculate thermodynamic properties for a given state specified by two properties.
+        :param stateProperties: A dictionary containing the specified properties and their values.
+        :return: A dictionary with all thermodynamic properties.
+        """
+        p, t, v, h, u, s, x = [None] * 7  # Initialize all properties to None
+
+        # Extract specified properties
+        prop1, prop2 = stateProperties.keys()
+        val1, val2 = stateProperties.values()
+
+        # Depending on the specified properties, calculate the state
+        # This is a simplified example for P&T specification. You need to handle all combinations.
+        if 'p' in stateProperties and 't' in stateProperties:
+            p, t = val1 if prop1 == 'p' else val2, val2 if prop2 == 't' else val1
+            # Assuming p is in bar and t in Celsius for SI units
+            steamTable = XSteam(XSteam.UNIT_SYSTEM_MKS)  # Use SI or English units based on your UI input
+            h = steamTable.h_pt(p, t)
+            s = steamTable.s_pt(p, t)
+            v = steamTable.v_pt(p, t)
+            u = steamTable.u_pt(p, t)
+            x = steamTable.x_pt(p, t)  # Quality, might be None if not in two-phase region
+
+        # Handle other combinations of specified properties...
+        # You will extend this section based on the properties specified.
+
+        return {'p': p, 't': t, 'v': v, 'h': h, 'u': u, 's': s, 'x': x}
+
     def calculateProperties(self):
         """
         Calculates the thermodynamic state variables based on specified values.
@@ -238,6 +267,22 @@ class main_window(QWidget,Ui__frm_StateCalculator):
         Total of 21 cases to deal with.  I will attack them in the order shown above
         :return: nothing
         """
+        """
+        Calculates the thermodynamic state variables for State 1 and State 2,
+        then computes the change in properties.
+        """
+        # Example of fetching specified properties for State 1 and State 2
+        state1Properties = {'p': float(self._le_Property1_State1.text()), 't': float(self._le_Property2_State1.text())}
+        state2Properties = {'p': float(self._le_Property1_State2.text()), 't': float(self._le_Property2_State2.text())}
+
+        # Calculate properties for State 1 and State 2
+        propsState1 = self.calculatePropertiesForState(state1Properties)
+        propsState2 = self.calculatePropertiesForState(state2Properties)
+
+        # Compute change in properties
+        deltaProps = {prop: propsState2[prop] - propsState1[prop] for prop in propsState1 if
+                      propsState1[prop] is not None and propsState2[prop] is not None}
+
         # Step 1: read which properties are being specified from the combo boxes
         SP=[self._cmb_Property1.currentText()[-2:-1], self._cmb_Property2.currentText()[-2:-1]]
         if SP[0]==SP[1]:
